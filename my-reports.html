@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Reports | ERS</title>
+  <meta name="description" content="View the emergency reports you've submitted and their current status.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🚨</span>
+        <span class="logo-text">ERS<small>Emergency Response System</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" id="navHome">Home</a></li>
+          <li><a href="report.html">Report Emergency</a></li>
+          <li><a href="instructions.html">Safety Instructions</a></li>
+          <li id="navMyReportsItem" class="hidden"><a href="my-reports.html" class="active">My Reports</a></li>
+          <li id="navSignupItem"><a href="signup.html">Sign Up</a></li>
+          <li id="navAuthItem"><a href="index.html" class="nav-cta">Log In</a></li>
+          <li id="navDashboardItem" class="hidden"><a href="admin.html">Dashboard</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="myReportsRoot">
+    <section class="section" style="padding-top:56px;">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="eyebrow">Your Activity</span>
+          <h2>My Reports</h2>
+          <p>Emergency reports submitted by <strong id="myReportsUserName">you</strong>, with their current status.</p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Report ID</th>
+                <th>Type</th>
+                <th>Location</th>
+                <th>Date/Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="myReportsTableBody"></tbody>
+          </table>
+          <div id="myReportsEmptyState" class="empty-state hidden">
+            <div class="feature-icon" style="margin:0 auto 16px;">📭</div>
+            <h3>You haven't submitted any reports yet</h3>
+            <p>Reports you submit while logged in will appear here.</p>
+            <a href="report.html" class="btn btn-primary" style="margin-top:12px;">Report an Emergency</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> ERS – Emergency Response System. All rights reserved.</p>
+      <p class="footer-note">Demo project for portfolio purposes. Not a real emergency service.</p>
+    </div>
+    <div class="container footer-bottom">
+      <p class="footer-credit"><img src="images/gvklogo.jpg" alt="GVK logo" class="footer-logo">Designed and built by Glory Kiwelu.</p>
+    </div>
+  </footer>
+
+  <!-- Report detail modal -->
+  <div id="reportModal" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Report <span id="modalReportId"></span></h3>
+        <button id="modalCloseBtn" class="modal-close" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="row"><span>Emergency Type</span><span id="modalType"></span></div>
+        <div class="row"><span>Location</span><span id="modalLocation"></span></div>
+        <div class="row"><span>Date / Time</span><span id="modalDateTime"></span></div>
+        <div class="row"><span>Status</span><span id="modalStatus"></span></div>
+        <div class="desc-block">
+          <span style="color:var(--color-text-muted); font-size:0.9rem;">Description</span>
+          <p id="modalDescription"></p>
+        </div>
+        <div class="row" id="modalMapRow">
+          <span>Location Map</span>
+          <a id="modalMapLink" href="#" target="_blank" rel="noopener">View on OpenStreetMap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/my-reports.js"></script>
+</body>
+</html>
