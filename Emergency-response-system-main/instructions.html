@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Instructions | ERS</title>
+  <meta name="description" content="Safety instructions for fire, medical emergencies, accidents, crime, and natural disasters.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🚨</span>
+        <span class="logo-text">ERS<small>Emergency Response System</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" id="navHome">Home</a></li>
+          <li><a href="report.html">Report Emergency</a></li>
+          <li><a href="instructions.html" class="active">Safety Instructions</a></li>
+          <li id="navMyReportsItem" class="hidden"><a href="my-reports.html">My Reports</a></li>
+          <li id="navSignupItem"><a href="signup.html">Sign Up</a></li>
+          <li id="navAuthItem"><a href="index.html" class="nav-cta">Log In</a></li>
+          <li id="navDashboardItem" class="hidden"><a href="admin.html">Dashboard</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:56px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Be Prepared</span>
+          <h2>Safety Instructions</h2>
+          <p>Click a category to expand step-by-step guidance for that type of emergency.</p>
+        </div>
+
+        <div class="instructions-grid">
+
+          <details class="instruction-card" open>
+            <summary>
+              <span class="icon fire">🔥</span>
+              Fire
+              <span class="chevron">▾</span>
+            </summary>
+            <div class="instruction-body">
+              <ol>
+                <li>Stay calm.</li>
+                <li>Raise the alarm so others nearby are aware.</li>
+                <li>Leave the building using the safest available exit.</li>
+                <li>Do not use elevators during a fire.</li>
+                <li>Move to a safe location, away from the building.</li>
+                <li>Call emergency services once you are safe.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="instruction-card">
+            <summary>
+              <span class="icon medical">🚑</span>
+              Medical Emergency
+              <span class="chevron">▾</span>
+            </summary>
+            <div class="instruction-body">
+              <ol>
+                <li>Check whether the person is responsive.</li>
+                <li>Call for medical assistance immediately.</li>
+                <li>Keep the person safe and comfortable while waiting for help.</li>
+                <li>Do not move an injured person unnecessarily.</li>
+                <li>Stay with them and monitor their breathing until help arrives.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="instruction-card">
+            <summary>
+              <span class="icon accident">🚗</span>
+              Accident
+              <span class="chevron">▾</span>
+            </summary>
+            <div class="instruction-body">
+              <ol>
+                <li>Check for immediate danger before approaching (traffic, fire, fuel leaks).</li>
+                <li>Turn on hazard lights and warn oncoming traffic if it's a road accident.</li>
+                <li>Call emergency services and describe the location clearly.</li>
+                <li>Do not move seriously injured people unless there's an immediate danger.</li>
+                <li>Provide basic first aid only if you are trained to do so.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="instruction-card">
+            <summary>
+              <span class="icon crime">🚨</span>
+              Crime
+              <span class="chevron">▾</span>
+            </summary>
+            <div class="instruction-body">
+              <ol>
+                <li>Prioritize your personal safety — move away from danger if possible.</li>
+                <li>Do not confront a suspect directly.</li>
+                <li>Contact local authorities as soon as it is safe to do so.</li>
+                <li>Note details that may help authorities (description, location, direction of travel).</li>
+                <li>Avoid disturbing the scene if a crime has already occurred.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="instruction-card">
+            <summary>
+              <span class="icon disaster">🌪️</span>
+              Natural Disaster
+              <span class="chevron">▾</span>
+            </summary>
+            <div class="instruction-body">
+              <ol>
+                <li>Follow official evacuation orders and local authority guidance.</li>
+                <li>Move to higher ground or a designated safe shelter as appropriate for the event.</li>
+                <li>Avoid flooded roads, damaged structures, and downed power lines.</li>
+                <li>Keep a battery-powered radio or phone charged for updates.</li>
+                <li>Check in with family and report your status once you are safe.</li>
+              </ol>
+            </div>
+          </details>
+
+        </div>
+
+        <div class="card" style="margin-top:28px; text-align:center;">
+          <p style="margin:0;">In immediate danger? This platform does not dispatch emergency services automatically. Always contact your local emergency number directly.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> ERS – Emergency Response System. All rights reserved.</p>
+      <p class="footer-note">Demo project for portfolio purposes. Not a real emergency service.</p>
+    </div>
+    <div class="container footer-bottom">
+      <p class="footer-credit"><img src="images/gvklogo.jpg" alt="GVK logo" class="footer-logo">Designed and built by Glory Kiwelu.</p>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
